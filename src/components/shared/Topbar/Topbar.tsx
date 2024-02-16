@@ -14,7 +14,9 @@ const Topbar = () => {
         {navLinks.map((link) => (
           <NavigationMenuItem>
             <Link to={link.href}>
-              <NavigationMenuLink>{link.name}</NavigationMenuLink>
+              <NavigationMenuLink className="p-6 text-4xl hover:bg-slate-600 flex ">
+                {link.name}
+              </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
         ))}
