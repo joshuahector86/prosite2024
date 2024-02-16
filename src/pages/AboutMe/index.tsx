@@ -1,5 +1,7 @@
+import Page from "@/components/layout/Page";
+
 const AboutMe = () => {
-  return <div>AboutMe</div>;
+  return <Page>AboutMe</Page>;
 };
 
 export default AboutMe;

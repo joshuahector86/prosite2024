@@ -1,5 +1,7 @@
+import Page from "@/components/layout/Page";
+
 const ContactMe = () => {
-  return <div>ContactMe</div>;
+  return <Page>ContactMe</Page>;
 };
 
 export default ContactMe;

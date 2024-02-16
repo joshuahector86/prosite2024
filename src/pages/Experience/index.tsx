@@ -1,5 +1,7 @@
+import Page from "@/components/layout/Page";
+
 const Experience = () => {
-  return <div>Experience</div>;
+  return <Page>Experience</Page>;
 };
 
 export default Experience;
