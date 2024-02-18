@@ -10,7 +10,7 @@ import { logo } from "@/assets";
 
 const Topbar = () => {
   return (
-    <NavigationMenu className="w-full flex justify-between">
+    <NavigationMenu className=" flex justify-between">
       <div className="flex items-center gap-2 text-lg font-semibold ">
         <img src={logo} alt="logo" className=" rounded-full w-16 h-16 " />
         Dimitri Hector
