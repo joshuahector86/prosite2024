@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import Copyright from "../Copyright/Copyright";
-import { CircleUser, GalleryVertical, Github, Linkedin } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { GalleryVertical, Github, Linkedin } from "lucide-react";
+
+import ContactMeFlyOut from "../ContactMeFlyOut/ContactMeFlyOut";
 
 const Footer = () => {
   return (
@@ -26,10 +27,7 @@ const Footer = () => {
       <div>
         <Copyright year={2024} owner="Dimitri Hector" />
       </div>
-      <Button className="flex gap-2">
-        <CircleUser />
-        Contact Me
-      </Button>
+      <ContactMeFlyOut />
     </div>
   );
 };

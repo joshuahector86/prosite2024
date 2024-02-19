@@ -7,6 +7,7 @@ import {
 import { Link } from "react-router-dom";
 import { navLinks } from "@/utils/urls";
 import { logo } from "@/assets";
+import ContactMeFlyOut from "../ContactMeFlyOut/ContactMeFlyOut";
 
 const Topbar = () => {
   return (
@@ -17,14 +18,20 @@ const Topbar = () => {
       </div>
       <NavigationMenuList>
         {navLinks.map((link) => (
-          <NavigationMenuItem>
+          <NavigationMenuItem key={link.name}>
             <Link to={link.href}>
-              <NavigationMenuLink className="p-6 text-lg hover:bg-gray-800  flex rounded-l">
+              <NavigationMenuLink className=" p-2 text-lg border-b-4 border-transparent hover:border-gray-800 flex ">
                 {link.name}
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
         ))}
+
+        <NavigationMenuItem>
+          <div className="p-1 text-lg border-b-4 border-transparent hover:border-gray-800  flex rounded-l">
+            <ContactMeFlyOut />
+          </div>
+        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   );

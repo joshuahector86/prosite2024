@@ -1,7 +1,12 @@
 import Page from "@/components/layout/Page";
+import { ContactMeForm } from "@/components/shared/ContactMeFlyOut/ContactMeForm";
 
 const ContactMe = () => {
-  return <Page>ContactMe</Page>;
+  return (
+    <Page>
+      <ContactMeForm />
+    </Page>
+  );
 };
 
 export default ContactMe;
