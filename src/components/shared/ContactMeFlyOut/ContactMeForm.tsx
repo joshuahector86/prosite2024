@@ -13,10 +13,19 @@ import { Button } from "@/components/ui/button";
 
 export const ContactMeForm = () => {
   const formSchema = z.object({
-    name: z.string().min(2).max(50),
+    name: z
+      .string()
+      .min(2, { message: "Name must be at least 2 characters" })
+      .max(50, { message: "NMax 50 Characters" }),
     email: z.string().email(),
-    inquiry: z.string().min(2).max(500),
-    message: z.string().min(2).max(500),
+    inquiry: z
+      .string()
+      .min(2, { message: "Inquiry must be at least 2 characters" })
+      .max(500, { message: "NMax 500 Characters" }),
+    message: z
+      .string()
+      .min(2, { message: "Messsage must be at least 2 characters" })
+      .max(500, { message: "NMax 500 Characters" }),
   });
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -27,9 +36,14 @@ export const ContactMeForm = () => {
       message: "",
     },
   });
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    return console.log("we are here" + values.inquiry);
-  }
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    try {
+      await formSchema.parseAsync(values);
+      console.log("it worked");
+    } catch (error) {
+      console.log("It didnt work");
+    }
+  };
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
