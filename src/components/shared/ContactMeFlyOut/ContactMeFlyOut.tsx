@@ -3,7 +3,6 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetDescription,
   SheetFooter,
   SheetHeader,
   SheetTitle,
@@ -24,18 +23,13 @@ const ContactMeFlyOut: React.FC<ContactMeFlyOutProps> = ({ icon }: any) => {
           Contact
         </Button>
       </SheetTrigger>
-      <SheetContent>
+      <SheetContent side={"middle"}>
         <SheetHeader>
-          <SheetTitle>Contact Me</SheetTitle>
-          <SheetDescription>
-            Fill out the form to send me an email!
-          </SheetDescription>
+          <SheetTitle className="mb-2">Contact Me</SheetTitle>
         </SheetHeader>
         <ContactMeForm />
         <SheetFooter>
-          <SheetClose asChild>
-            <Button type="submit">Save changes</Button>
-          </SheetClose>
+          <SheetClose asChild></SheetClose>
         </SheetFooter>
       </SheetContent>
     </Sheet>

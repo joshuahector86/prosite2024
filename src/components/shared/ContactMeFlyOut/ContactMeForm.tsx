@@ -1,11 +1,9 @@
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
@@ -15,35 +13,71 @@ import { Button } from "@/components/ui/button";
 
 export const ContactMeForm = () => {
   const formSchema = z.object({
-    username: z.string().min(2).max(50),
+    name: z.string().min(2).max(50),
+    email: z.string().email(),
+    inquiry: z.string().min(2).max(500),
+    message: z.string().min(2).max(500),
   });
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      username: "",
+      name: "",
+      email: "",
+      inquiry: "",
+      message: "",
     },
   });
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
+    return console.log("we are here" + values.inquiry);
   }
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <FormField
           control={form.control}
-          name="username"
+          name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Username</FormLabel>
+              <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="shadcn" {...field} />
+                <Input placeholder="Name" type="text" {...field} />
               </FormControl>
-              <FormDescription>
-                This is your public display name.
-              </FormDescription>
-              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="email"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Email</FormLabel>
+              <FormControl>
+                <Input placeholder="Email" type="email" {...field} />
+              </FormControl>
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="inquiry"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>How did you find my site?</FormLabel>
+              <FormControl>
+                <Input placeholder="Inquiry" type="text" {...field} />
+              </FormControl>
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="message"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>message</FormLabel>
+              <FormControl>
+                <Input placeholder="Message" type="message" {...field} />
+              </FormControl>
             </FormItem>
           )}
         />
