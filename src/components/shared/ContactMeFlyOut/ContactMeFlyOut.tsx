@@ -11,11 +11,16 @@ import {
 } from "@/components/ui/sheet";
 import { ContactMeForm } from "./ContactMeForm";
 
-const ContactMeFlyOut = () => {
+interface ContactMeFlyOutProps {
+  icon?: React.ReactNode;
+}
+
+const ContactMeFlyOut: React.FC<ContactMeFlyOutProps> = ({ icon }: any) => {
   return (
     <Sheet>
       <SheetTrigger asChild>
         <Button variant="ghost" className="flex gap-2 text-lg">
+          {icon && <div>{icon}</div>}
           Contact
         </Button>
       </SheetTrigger>

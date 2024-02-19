@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Copyright from "../Copyright/Copyright";
-import { GalleryVertical, Github, Linkedin } from "lucide-react";
+import { CircleUser, GalleryVertical, Github, Linkedin } from "lucide-react";
 
 import ContactMeFlyOut from "../ContactMeFlyOut/ContactMeFlyOut";
 
@@ -27,7 +27,9 @@ const Footer = () => {
       <div>
         <Copyright year={2024} owner="Dimitri Hector" />
       </div>
-      <ContactMeFlyOut />
+      <div className="flex items-center">
+        <ContactMeFlyOut icon={<CircleUser />} />
+      </div>
     </div>
   );
 };

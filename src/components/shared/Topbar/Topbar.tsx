@@ -20,7 +20,7 @@ const Topbar = () => {
         {navLinks.map((link) => (
           <NavigationMenuItem key={link.name}>
             <Link to={link.href}>
-              <NavigationMenuLink className=" p-2 text-lg border-b-4 border-transparent hover:border-gray-800 flex ">
+              <NavigationMenuLink className=" p-2 text-lg border-b-4 border-transparent hover:border-cyan-600 flex ">
                 {link.name}
               </NavigationMenuLink>
             </Link>
@@ -28,7 +28,7 @@ const Topbar = () => {
         ))}
 
         <NavigationMenuItem>
-          <div className="p-1 text-lg border-b-4 border-transparent hover:border-gray-800  flex rounded-l">
+          <div className="p-1 text-lg border-b-4 border-transparent hover:border-cyan-600  flex rounded-l">
             <ContactMeFlyOut />
           </div>
         </NavigationMenuItem>
