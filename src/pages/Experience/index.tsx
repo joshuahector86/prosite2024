@@ -7,22 +7,24 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { CiscoExp } from "./details";
+import { CiscoExp } from "./info";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { logo } from "@/assets";
+import { ciscoLogo } from "@/assets";
 const Experience = () => {
   return (
     <Page>
       <Tabs
-        defaultValue="account"
+        defaultValue="cisco"
         className="w-full h-full bg-zinc-800 rounded-lg "
       >
         {/* TRIGGERS FOR THE TABS */}
         <TabsList className="grid w-full grid-cols-2">
-          <TabsTrigger value="cisco">{CiscoExp.ogranizationName}</TabsTrigger>
-          <TabsTrigger value="howard/autodesk">
-            Robotics & Cyber Security Engineer
+          <TabsTrigger className="text-2xl" value="cisco">
+            {CiscoExp.ogranizationName}
+          </TabsTrigger>
+          <TabsTrigger className="text-2xl" value="howard/autodesk">
+            Howard/Autodesk
           </TabsTrigger>
         </TabsList>
         {/* CISCO SYSTEMS TAB CONTENT */}
@@ -62,7 +64,7 @@ const Experience = () => {
                 <p>{CiscoExp.bullet16}</p>
                 <p>{CiscoExp.bullet17}</p>
               </div>
-              <img src={logo} alt="" className="w-[50%] h-[50%]" />
+              <img src={ciscoLogo} alt="" className="w-[50%] h-[50%]" />
             </CardContent>
           </Card>
         </TabsContent>

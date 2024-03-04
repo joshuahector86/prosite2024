@@ -12,10 +12,12 @@ import ContactMeFlyOut from "../ContactMeFlyOut/ContactMeFlyOut";
 const Topbar = () => {
   return (
     <NavigationMenu className=" flex justify-between">
-      <div className="flex items-center gap-2 text-lg font-semibold ">
-        <img src={logo} alt="logo" className=" rounded-full w-16 h-16 " />
-        Dimitri Hector
-      </div>
+      <Link to="/">
+        <div className="flex items-center gap-2 text-lg font-semibold ">
+          <img src={logo} alt="logo" className=" rounded-full w-16 h-16 " />
+          Dimitri Hector
+        </div>
+      </Link>
       <NavigationMenuList>
         {navLinks.map((link) => (
           <NavigationMenuItem key={link.name}>
