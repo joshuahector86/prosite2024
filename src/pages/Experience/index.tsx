@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { CiscoExp } from "./info";
+import { CiscoExp, AutoHowardExp } from "./info";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ciscoLogo } from "@/assets";
@@ -64,7 +64,11 @@ const Experience = () => {
                 <p>{CiscoExp.bullet16}</p>
                 <p>{CiscoExp.bullet17}</p>
               </div>
-              <img src={ciscoLogo} alt="" className="w-[50%] h-[50%]" />
+              <img
+                src={ciscoLogo}
+                alt="ciscoLogo"
+                className="w-[50%] h-[50%]"
+              />
             </CardContent>
           </Card>
         </TabsContent>
@@ -73,15 +77,30 @@ const Experience = () => {
           <Card className="border-none">
             <CardHeader>
               <CardTitle>
-                Robotics & Cyber Security Engineer @ Howard University &
-                Autodesk Inc
+                {AutoHowardExp.position} @ {AutoHowardExp.position}
               </CardTitle>
               <CardDescription>
                 Some details about my experience as an engineer working amonst
                 both organizations
               </CardDescription>
             </CardHeader>
-            <CardContent className="space-y-2"></CardContent>
+            <CardContent className="space-y-2">
+              <div>
+                <h3 className="font-semibold text-2xl p-2">
+                  Published Research
+                </h3>
+                <p>{AutoHowardExp.bullet1}</p>
+                <h3 className="font-semibold text-2xl p-2">
+                  Simulation Design
+                </h3>
+                <p>{AutoHowardExp.bullet2}</p>
+                <h3 className="font-semibold text-2xl p-2">
+                  Security Engineering
+                </h3>
+                <p>{AutoHowardExp.bullet3}</p>
+                <p>{AutoHowardExp.bullet4}</p>
+              </div>
+            </CardContent>
             <CardFooter></CardFooter>
           </Card>
         </TabsContent>

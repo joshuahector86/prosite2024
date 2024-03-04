@@ -1,4 +1,4 @@
-export const CiscoExp = {
+const CiscoExp = {
   ogranizationName: "Cisco Systems",
   position: "Full Stack Software Engineer @ Cisco Systems",
   bullet1:
@@ -35,3 +35,18 @@ export const CiscoExp = {
   bullet17:
     "- Developed prototypes for company and shareholder demos to showcase the capabilities of the proposed solutions.",
 };
+
+const AutoHowardExp = {
+  organizationName: "Howard University & Autodesk Inc",
+  position: "Robotics & Cyber Security Engineer",
+  bullet1:
+    "- First Author of published work in the IEEE Journal, contributing to advancements in cyber security measures for robotic systems.",
+  bullet2:
+    "- Designed testable simulations in the Unity game engine for robotics research, enabling comprehensive experimentation and analysis.",
+  bullet3:
+    "- Developed and implemented security measures for robotic systems, ensuring the integrity and safety of the machinery.",
+  bullet4:
+    "- Implemented security measures for software systems at Howard University, enhancing overall cybersecurity.",
+};
+
+export { CiscoExp, AutoHowardExp };
