@@ -10,7 +10,7 @@ import {
 import { CiscoExp, AutoHowardExp } from "./info";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ciscoLogo } from "@/assets";
+import { ciscoLogo, howardLogo, autodeskLogo } from "@/assets";
 const Experience = () => {
   return (
     <Page>
@@ -19,7 +19,10 @@ const Experience = () => {
         className="w-full h-full bg-zinc-800 rounded-lg "
       >
         {/* TRIGGERS FOR THE TABS */}
-        <TabsList className="grid w-full grid-cols-2">
+        <TabsList className="grid w-full grid-cols-3">
+          <TabsTrigger className="text-2xl" value="projects">
+            Professional Projects
+          </TabsTrigger>
           <TabsTrigger className="text-2xl" value="cisco">
             {CiscoExp.ogranizationName}
           </TabsTrigger>
@@ -36,7 +39,7 @@ const Experience = () => {
                 Details about my experiences being a software engineer at Cisco
               </CardDescription>
             </CardHeader>
-            <CardContent className="space-y-2 gap-4 flex">
+            <CardContent className="space-y-2 gap-4 flex items-center justify-center text-xl">
               <div>
                 <h3 className="font-semibold text-2xl p-2">Lead UI Engineer</h3>
                 <p>{CiscoExp.bullet1}</p>
@@ -67,7 +70,7 @@ const Experience = () => {
               <img
                 src={ciscoLogo}
                 alt="ciscoLogo"
-                className="w-[50%] h-[50%]"
+                className="w-[15%] h-[15%]"
               />
             </CardContent>
           </Card>
@@ -75,7 +78,7 @@ const Experience = () => {
         {/* HOWARD & AUTODESK TAB CONTENT */}
         <TabsContent value="howard/autodesk">
           <Card className="border-none">
-            <CardHeader>
+            <CardHeader className="flex items-center">
               <CardTitle>
                 {AutoHowardExp.position} @ {AutoHowardExp.position}
               </CardTitle>
@@ -84,7 +87,7 @@ const Experience = () => {
                 both organizations
               </CardDescription>
             </CardHeader>
-            <CardContent className="space-y-2">
+            <CardContent className="justify-center flex items-center space-y-2 text-xl">
               <div>
                 <h3 className="font-semibold text-2xl p-2">
                   Published Research
@@ -100,8 +103,12 @@ const Experience = () => {
                 <p>{AutoHowardExp.bullet3}</p>
                 <p>{AutoHowardExp.bullet4}</p>
               </div>
+              <div className="flex items-center gap-1">
+                <img src={autodeskLogo} className="w-[70%]" alt="howard" />
+                <img src={howardLogo} className="w-[50%]" alt="autodesk" />
+              </div>
             </CardContent>
-            <CardFooter></CardFooter>
+            <CardFooter className="flex items-center justify-center"></CardFooter>
           </Card>
         </TabsContent>
       </Tabs>
