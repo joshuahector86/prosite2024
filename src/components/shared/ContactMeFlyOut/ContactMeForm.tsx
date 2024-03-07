@@ -10,8 +10,10 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
+import { useToast } from "@/components/ui/use-toast";
 
 export const ContactMeForm = () => {
+  const { toast } = useToast();
   const formSchema = z.object({
     name: z
       .string()
@@ -40,8 +42,14 @@ export const ContactMeForm = () => {
     try {
       await formSchema.parseAsync(values);
       console.log("it worked");
+      toast({
+        description: "Your form was successfully sent!",
+      });
     } catch (error) {
       console.log("It didnt work");
+      toast({
+        description: "Please check the fields and try again.",
+      });
     }
   };
   return (
