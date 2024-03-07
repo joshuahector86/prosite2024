@@ -4,12 +4,17 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { navLinks } from "@/utils/urls";
 import { logo } from "@/assets";
 import ContactMeFlyOut from "../ContactMeFlyOut/ContactMeFlyOut";
 
 const Topbar = () => {
+  const location = useLocation();
+
+  const isActive = (path: string): boolean => {
+    return location.pathname === path;
+  };
   return (
     <NavigationMenu className=" flex justify-between">
       <Link to="/">
@@ -22,7 +27,13 @@ const Topbar = () => {
         {navLinks.map((link) => (
           <NavigationMenuItem key={link.name}>
             <Link to={link.href}>
-              <NavigationMenuLink className=" p-2 text-lg border-b-4 border-transparent hover:border-cyan-600 flex ">
+              <NavigationMenuLink
+                className={` p-2 text-lg border-b-4 border-transparent
+               hover:border-cyan-600 flex 
+               ${isActive(link.href) ? "border-cyan-600" : ""}
+               
+               `}
+              >
                 {link.name}
               </NavigationMenuLink>
             </Link>
@@ -30,7 +41,9 @@ const Topbar = () => {
         ))}
 
         <NavigationMenuItem>
-          <div className="p-1 text-lg border-b-4 border-transparent hover:border-cyan-600  flex rounded-l">
+          <div
+            className={`p-[1.5px] text-lg border-b-4 border-transparent hover:border-cyan-600 flex  `}
+          >
             <ContactMeFlyOut />
           </div>
         </NavigationMenuItem>
