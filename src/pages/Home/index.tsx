@@ -13,11 +13,11 @@ const Home = () => {
           alt="photo of me"
           className="rounded-[20px] w-[25%] "
         />
-        <Card className="border-none rounded-b-[24px] text-xl bg-zinc-800">
+        <Card className="border-none flex flex-col items-center text-xl max-w-[75%]">
           <CardHeader>
             <CardTitle>Welcome! My name is Dimitri Hector</CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="">
             [NEEDS TO BE UPDATED] Welcome to my site! My preferred name is
             Dimitri Hector and I do a lot of computer science and tech things. I
             am an energetic and passionate individual who is constantly in

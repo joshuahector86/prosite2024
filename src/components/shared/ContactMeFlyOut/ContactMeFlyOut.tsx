@@ -23,7 +23,7 @@ const ContactMeFlyOut: React.FC<ContactMeFlyOutProps> = ({ icon }: any) => {
           Contact
         </Button>
       </SheetTrigger>
-      <SheetContent side={"middle"}>
+      <SheetContent side={"right"}>
         <SheetHeader>
           <SheetTitle className="mb-2">Contact Me</SheetTitle>
         </SheetHeader>

@@ -1,14 +1,16 @@
-import { navLinks } from "@/utils/urls";
+import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 const Heading = () => {
-  const links = navLinks;
   return (
-    <div className="flex justify-between items-center h-screen text-2xl">
-      {links.map((link) => (
-        <div className="hover:text-4xl p-2">
-          <Link to={link.href}>{link.name}</Link>
-        </div>
-      ))}
+    <div className="flex justify-center items-center h-screen text-2xl">
+      <Link to="/home">
+        <Button
+          className="text-2xl p-8 hover:bg-zinc-900 border-zinc-900"
+          variant={"outline"}
+        >
+          To The Site!
+        </Button>
+      </Link>
     </div>
   );
 };

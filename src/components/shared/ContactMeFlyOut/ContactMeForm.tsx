@@ -95,7 +95,9 @@ export const ContactMeForm = () => {
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <Button type="submit" variant={"outline"}>
+          Submit
+        </Button>
       </form>
     </Form>
   );
