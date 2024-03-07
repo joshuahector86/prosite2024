@@ -8,10 +8,14 @@ interface PageProps {
 
 const Page: React.FC<PageProps> = ({ children }) => {
   return (
-    <div>
-      <Topbar />
-      <div>{children}</div>
-      <Footer />
+    <div className=" h-screen flex flex-col  ">
+      <div className="p-4">
+        <Topbar />
+      </div>
+      <div className="flex-grow p-4">{children}</div>
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 };
