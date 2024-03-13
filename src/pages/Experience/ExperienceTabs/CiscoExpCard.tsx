@@ -19,11 +19,11 @@ const CiscoExpCard = () => {
     <Card className="border-none flex items-center flex-col ">
       <CardHeader className="flex items-center">
         <CardTitle>{CiscoExp.position}</CardTitle>
-        <CardDescription className="flex items-center justify-center gap-8 text-lg italic">
+        <CardDescription className="text-lg italic">
           JULY 19, 2021 - PRESENT
         </CardDescription>
       </CardHeader>
-      <CardContent className="flex items-center justify-center text-xl min-w-[1000px]">
+      <CardContent className="flex flex-col items-center justify-center text-xl ">
         <Accordion type="multiple" className="w-full">
           <AccordionItem value="item-1">
             <AccordionTrigger>Lead UI Engineer</AccordionTrigger>
@@ -63,8 +63,10 @@ const CiscoExpCard = () => {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
+        <div className="flex justify-center mt-10 max-w-[1000px]">
+          <img src={ciscoLogo} alt="ciscoLogo" className="w-[18%]" />
+        </div>
       </CardContent>
-      <img src={ciscoLogo} alt="ciscoLogo" className="w-[10%] h-[10%]" />
     </Card>
   );
 };
