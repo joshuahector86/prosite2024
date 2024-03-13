@@ -10,7 +10,7 @@ const Experience = () => {
           {/* TRIGGERS FOR THE TABS */}
           <TabsList className="grid w-full grid-cols-2 ">
             <TabsTrigger
-              className="md:text-2xl rounded-[24px] hover:bg-zinc-600 text-sm"
+              className="text-sm md:text-2xl rounded-[24px] hover:bg-zinc-600"
               value="cisco"
             >
               Cisco Systems
