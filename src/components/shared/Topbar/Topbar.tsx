@@ -8,9 +8,17 @@ import { Link, useLocation } from "react-router-dom";
 import { navLinks } from "@/utils/urls";
 import { logo } from "@/assets";
 import ContactMeFlyOut from "../ContactMeFlyOut/ContactMeFlyOut";
+import { useState } from "react";
+import { MenuSquareIcon } from "lucide-react";
 
 const Topbar = () => {
   const location = useLocation();
+
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
 
   const isActive = (path: string): boolean => {
     return location.pathname === path;
@@ -25,12 +33,12 @@ const Topbar = () => {
       </Link>
       <NavigationMenuList>
         {navLinks.map((link) => (
-          <NavigationMenuItem key={link.name}>
+          <NavigationMenuItem className="hidden md:block" key={link.name}>
             <Link to={link.href}>
               <NavigationMenuLink
                 className={` p-2 text-lg border-b-4 border-transparent
-               hover:border-cyan-600 flex 
-               ${isActive(link.href) ? "border-cyan-600" : ""}
+               hover:border-zinc-600 flex 
+               ${isActive(link.href) ? "border-zinc-600" : ""}
                
                `}
               >
@@ -40,13 +48,36 @@ const Topbar = () => {
           </NavigationMenuItem>
         ))}
 
-        <NavigationMenuItem>
+        <NavigationMenuItem className="hidden md:block">
           <div
-            className={`p-[1.5px] text-lg border-b-4 border-transparent hover:border-cyan-600 flex  `}
+            className={`p-[1.5px] text-lg border-b-4 border-transparent hover:border-zinc-600 flex  `}
           >
             <ContactMeFlyOut />
           </div>
         </NavigationMenuItem>
+
+        {/* Hamburger Menu */}
+        <div className="md:hidden">
+          <button
+            onClick={toggleMenu}
+            className=""
+            style={isMenuOpen ? { display: "none" } : {}}
+          >
+            <MenuSquareIcon />
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden flex flex-col ">
+            <Link className="hover:text-zinc-500" to="/home">
+              Home
+            </Link>
+            <Link className="hover:text-zinc-500" to="/experience">
+              Experience
+            </Link>
+          </div>
+        )}
       </NavigationMenuList>
     </NavigationMenu>
   );
