@@ -38,7 +38,10 @@ const CiscoExpCard = () => {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger> Software Tools Development</AccordionTrigger>
+            <AccordionTrigger className="flex items-start">
+              {" "}
+              Software Tools Development
+            </AccordionTrigger>
             <AccordionContent className="text-xl">
               <p>{CiscoExp.bullet8}</p>
               <p>{CiscoExp.bullet9}</p>

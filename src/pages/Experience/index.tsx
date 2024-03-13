@@ -8,15 +8,15 @@ const Experience = () => {
       <div className="w-full flex justify-center">
         <Tabs defaultValue="cisco" className="w-[85%] h-full  rounded-[24px] ">
           {/* TRIGGERS FOR THE TABS */}
-          <TabsList className="grid w-full grid-cols-2">
+          <TabsList className="grid w-full grid-cols-2 ">
             <TabsTrigger
-              className="text-2xl rounded-[24px] hover:bg-zinc-600"
+              className="md:text-2xl rounded-[24px] hover:bg-zinc-600 text-sm"
               value="cisco"
             >
               Cisco Systems
             </TabsTrigger>
             <TabsTrigger
-              className="text-2xl rounded-[24px] hover:bg-zinc-600"
+              className="text-sm md:text-2xl rounded-[24px] hover:bg-zinc-600"
               value="howard/autodesk"
             >
               Howard/Autodesk

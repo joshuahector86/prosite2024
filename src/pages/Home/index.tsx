@@ -18,13 +18,15 @@ const Home = () => {
             <CardTitle>Welcome! My name is Dimitri Hector</CardTitle>
           </CardHeader>
           <CardContent className="">
-            [NEEDS TO BE UPDATED] Welcome to my site! My preferred name is
-            Dimitri Hector and I do a lot of computer science and tech things. I
-            am an energetic and passionate individual who is constantly in
-            search of new challenges and fun to be had! Outside of my technical
-            career I am a professional West Coast Swing dancer and full time
-            tech/game nerd. Check out this page for details about my experience.
-            Thanks for stopping by!
+            Welcome to my site! I’m a full stack software engineer who is
+            constantly learning what the tech world has to offer. I enjoy
+            exploring new technology, expanding my understanding of the modern
+            tech world, building computers, and just generally getting nerdy.
+            This website lists some of my previous professional experience and
+            includes links to my personal portfolio site where I place projects
+            that were me playing around with various technologies. Feel free to
+            reach out to me using the contact form or via LinkedIn. Thanks for
+            stopping by!
           </CardContent>
         </Card>
         <Link
