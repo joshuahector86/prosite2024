@@ -29,8 +29,8 @@ const Topbar = () => {
             <Link to={link.href}>
               <NavigationMenuLink
                 className={` p-2 text-lg border-b-4 border-transparent
-               hover:border-cyan-600 flex 
-               ${isActive(link.href) ? "border-cyan-600" : ""}
+               hover:border-zinc-600 flex 
+               ${isActive(link.href) ? "border-zinc-600" : ""}
                
                `}
               >
@@ -42,7 +42,7 @@ const Topbar = () => {
 
         <NavigationMenuItem>
           <div
-            className={`p-[1.5px] text-lg border-b-4 border-transparent hover:border-cyan-600 flex  `}
+            className={`p-[1.5px] text-lg border-b-4 border-transparent hover:border-zinc-600 flex  `}
           >
             <ContactMeFlyOut />
           </div>
