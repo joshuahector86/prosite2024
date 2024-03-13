@@ -13,6 +13,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Link } from "react-router-dom";
 const HowardExpCard = () => {
   return (
     <Card className="border-none flex items-center flex-col">
@@ -29,7 +30,14 @@ const HowardExpCard = () => {
           <AccordionItem value="item-1">
             <AccordionTrigger>Published Research</AccordionTrigger>
             <AccordionContent className="text-xl">
-              <p>{AutoHowardExp.bullet1}</p>
+              <p className="mb-2">{AutoHowardExp.bullet1}</p>
+              <Link
+                target="_blank"
+                to="https://ieeexplore.ieee.org/document/9473818"
+                className="p-3 underline hover:text-purple-800"
+              >
+                Published Paper
+              </Link>
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
