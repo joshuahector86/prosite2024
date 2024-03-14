@@ -25,7 +25,7 @@ const Topbar = () => {
   };
   return (
     <NavigationMenu className=" flex justify-between">
-      <Link to="/">
+      <Link to="/prosite2024">
         <div className="flex items-center gap-2 text-lg font-semibold ">
           <img src={logo} alt="logo" className=" rounded-full w-16 h-16 " />
           Dimitri Hector

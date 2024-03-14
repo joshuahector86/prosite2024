@@ -1,8 +1,8 @@
 // Icon Imports
 export const navLinks = [
-  { name: "Home", href: "/home" },
+  { name: "Home", href: "/prosite2024/home" },
 
-  { name: "Experience", href: "/experience" },
+  { name: "Experience", href: "/prosite2024/experience" },
 ];
 
 export const footerLinks = [

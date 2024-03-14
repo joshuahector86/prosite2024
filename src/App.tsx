@@ -4,10 +4,10 @@ import { ContactMe, Experience, Heading, Home } from "./pages";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Heading />} />
-      <Route path="/home" element={<Home />} />
-      <Route path="/contact" element={<ContactMe />} />
-      <Route path="/experience" element={<Experience />} />
+      <Route path="/prosite2024" element={<Heading />} />
+      <Route path="/prosite2024/home" element={<Home />} />
+      <Route path="/prosite2024/contact" element={<ContactMe />} />
+      <Route path="/prosite2024/experience" element={<Experience />} />
     </Routes>
   );
 }
