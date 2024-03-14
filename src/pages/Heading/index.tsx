@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Heading = () => {
   return (
     <Link
-      to="/prosite2024/home"
+      to="/home"
       className="flex justify-center items-center h-screen text-2xl"
     >
       <Canvas>
