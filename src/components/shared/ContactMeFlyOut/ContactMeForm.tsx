@@ -1,57 +1,52 @@
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
+  FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { Button } from "@/components/ui/button";
-import { useToast } from "@/components/ui/use-toast";
+import { toast } from "@/components/ui/use-toast";
 
 export const ContactMeForm = () => {
-  const { toast } = useToast();
   const formSchema = z.object({
-    name: z
-      .string()
-      .min(2, { message: "Name must be at least 2 characters" })
-      .max(50, { message: "NMax 50 Characters" }),
+    name: z.string().min(2).max(50),
     email: z.string().email(),
-    inquiry: z
-      .string()
-      .min(2, { message: "Inquiry must be at least 2 characters" })
-      .max(500, { message: "NMax 500 Characters" }),
-    message: z
-      .string()
-      .min(2, { message: "Messsage must be at least 2 characters" })
-      .max(500, { message: "NMax 500 Characters" }),
+    message: z.string().min(2).max(100),
   });
+
+  // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
       email: "",
-      inquiry: "",
       message: "",
     },
   });
-  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+
+  async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       await formSchema.parseAsync(values);
-      console.log("it worked");
+      console.log(values);
       toast({
-        description: "Your form was successfully sent!",
+        description:
+          "The form was submitted successfully! Thanks for reaching out!",
       });
     } catch (error) {
-      console.log("It didnt work");
+      console.log("it didnt work", error);
       toast({
-        description: "Please check the fields and try again.",
+        description:
+          "Please check the form fields and make corrections where needed.",
       });
     }
-  };
+  }
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -62,8 +57,9 @@ export const ContactMeForm = () => {
             <FormItem>
               <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="Name" type="text" {...field} />
+                <Input placeholder="name" {...field} />
               </FormControl>
+              <FormMessage />
             </FormItem>
           )}
         />
@@ -74,20 +70,9 @@ export const ContactMeForm = () => {
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder="Email" type="email" {...field} />
+                <Input placeholder="email" {...field} />
               </FormControl>
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="inquiry"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>How did you find my site?</FormLabel>
-              <FormControl>
-                <Input placeholder="Inquiry" type="text" {...field} />
-              </FormControl>
+              <FormMessage />
             </FormItem>
           )}
         />
@@ -96,14 +81,15 @@ export const ContactMeForm = () => {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>message</FormLabel>
+              <FormLabel>Message</FormLabel>
               <FormControl>
-                <Input placeholder="Message" type="message" {...field} />
+                <Input className="h-[200px]" placeholder="message" {...field} />
               </FormControl>
+              <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit" variant={"outline"}>
+        <Button variant={"outline"} type="submit">
           Submit
         </Button>
       </form>
