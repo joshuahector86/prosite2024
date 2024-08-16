@@ -10,7 +10,7 @@ const Page: React.FC<PageProps> = ({ children }) => {
   return (
     <div className="h-screen flex flex-col justify-between">
       <Topbar />
-      <div className="mt-10 h-screen">{children}</div>
+      <div className="mt-10 flex-grow">{children}</div>
       <Footer />
     </div>
   );

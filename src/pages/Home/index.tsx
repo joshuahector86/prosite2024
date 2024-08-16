@@ -3,6 +3,8 @@ import Page from "../../components/layout/Page";
 import { photoOfMe } from "@/assets";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import ContactMeFlyOut from "@/components/shared/ContactMeFlyOut/ContactMeFlyOut";
+import { DownloadIcon, GalleryVertical } from "lucide-react";
 
 const Home = () => {
   return (
@@ -44,31 +46,28 @@ const HomeButtons = () => {
     document.body.removeChild(link);
   };
   return (
-    <div className="flex gap-2">
+    <div className="flex flex-col gap-2  md:flex-row ">
       <Link
         target="_blank"
         to="https://joshuahector86.github.io/portfolio_2023/"
       >
         <Button
-          className="font-normal hover:bg-zinc-800 border-zinc-500 min-w-[12rem]"
+          className="font-normal hover:text-[#ff2600] hover:bg-transparent hover:border-[#ff2600] border-zinc-500 flex gap-2 items-center"
           variant="outline"
         >
-          Personal Portfolio
+          <GalleryVertical size={15} color="#ff2600" />
+          PERSONAL PORTFOLIO
         </Button>
       </Link>
       <Button
         variant="outline"
-        className="hover:bg-zinc-800 border-zinc-500 min-w-[12rem] font-normal"
+        className="hover:bg-transparent hover:text-[#ff2600] hover:border-[#ff2600] border-zinc-500  font-normal flex gap-2 items-center"
         onClick={downloadResume}
       >
+        <DownloadIcon size={15} color="#ff2600" />
         DOWNLOAD RESUME
       </Button>
-      <Button
-        className=" hover:bg-zinc-800 border-zinc-500 min-w-[12rem] font-normal"
-        variant="outline"
-      >
-        CONTACT ME
-      </Button>
+      <ContactMeFlyOut />
     </div>
   );
 };

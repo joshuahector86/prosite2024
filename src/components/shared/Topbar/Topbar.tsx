@@ -6,17 +6,16 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Link, useLocation } from "react-router-dom";
 import { navLinks } from "@/utils/urls";
-import { useState } from "react";
 import { MenuSquareIcon } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@radix-ui/react-dropdown-menu";
 
 const Topbar = () => {
   const location = useLocation();
-
-  const [isMenuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen(!isMenuOpen);
-  };
 
   const isActive = (path: string): boolean => {
     return location.pathname === path;
@@ -29,8 +28,8 @@ const Topbar = () => {
             <Link to={link.href}>
               <NavigationMenuLink
                 className={` p-2 text-lg border-b-4 border-transparent
-               hover:border-zinc-600 flex 
-               ${isActive(link.href) ? "border-zinc-600" : ""}
+               hover:text-[#ff2600] flex 
+               ${isActive(link.href) ? "text-[#ff2600]" : ""}
                
                `}
               >
@@ -40,28 +39,23 @@ const Topbar = () => {
           </NavigationMenuItem>
         ))}
 
-        {/* Hamburger Menu */}
-        <div className="md:hidden absolute  top-0">
-          <button
-            onClick={toggleMenu}
-            className=""
-            style={isMenuOpen ? { display: "none" } : {}}
-          >
+        <DropdownMenu>
+          <DropdownMenuTrigger className="md:hidden p-2">
             <MenuSquareIcon />
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden flex flex-col ">
-            <Link className="hover:text-zinc-500" to="/">
-              Home
-            </Link>
-            <Link className="hover:text-zinc-500" to="/experience">
-              Experience
-            </Link>
-          </div>
-        )}
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="flex gap-4">
+            <DropdownMenuItem>
+              <Link className="hover:text-zinc-500" to="/">
+                Home
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem>
+              <Link className="hover:text-zinc-500" to="/experience">
+                Experience
+              </Link>
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </NavigationMenuList>
     </NavigationMenu>
   );
