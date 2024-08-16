@@ -19,7 +19,7 @@ const ContactMeFlyOut: React.FC<ContactMeFlyOutProps> = () => {
       <SheetTrigger>
         <Button
           variant="outline"
-          className="flex gap-2 hover:text-[#ff2600] items-center hover:bg-transparent hover:border-[#ff2600] border-zinc-500 w-[12rem] font-normal"
+          className="mb-1 w-[15rem] flex gap-2 hover:text-[#ff2600] items-center hover:bg-transparent hover:border-[#ff2600] border-zinc-500  font-normal"
         >
           <SendHorizonalIcon size={15} color="#ff2600" />
           CONTACT ME

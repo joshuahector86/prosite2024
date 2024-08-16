@@ -53,7 +53,7 @@ const HomeButtons = () => {
         to="https://joshuahector86.github.io/portfolio_2023/"
       >
         <Button
-          className="font-normal hover:text-[#ff2600] hover:bg-transparent hover:border-[#ff2600] border-zinc-500 flex gap-2 items-center"
+          className="w-[15rem] font-normal hover:text-[#ff2600] hover:bg-transparent hover:border-[#ff2600] border-zinc-500 flex gap-2 items-center"
           variant="outline"
         >
           <GalleryVertical size={15} color="#ff2600" />
@@ -62,7 +62,7 @@ const HomeButtons = () => {
       </Link>
       <Button
         variant="outline"
-        className="hover:bg-transparent hover:text-[#ff2600] hover:border-[#ff2600] border-zinc-500  font-normal flex gap-2 items-center"
+        className="w-[15rem] hover:bg-transparent hover:text-[#ff2600] hover:border-[#ff2600] border-zinc-500  font-normal flex gap-2 items-center"
         onClick={downloadResume}
       >
         <DownloadIcon size={15} color="#ff2600" />

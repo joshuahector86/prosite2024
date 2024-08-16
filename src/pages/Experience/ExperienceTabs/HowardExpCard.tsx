@@ -15,7 +15,7 @@ const HowardExpCard = () => {
       <CardHeader className="flex items-center">
         <CardTitle className="flex gap-2 items-center">
           {HowardExp.position} @ {HowardExp.organizationName}
-          <img src={howardLogo} alt="" className="w-20" />
+          <img src={howardLogo} alt="" className="w-[7rem]" />
         </CardTitle>
         <CardDescription className="text-lg italic">
           FEBRUARY 2020 - MAY 2021
