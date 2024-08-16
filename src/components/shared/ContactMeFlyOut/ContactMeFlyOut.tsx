@@ -4,29 +4,28 @@ import {
   SheetClose,
   SheetContent,
   SheetFooter,
-  SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { ContactMeForm } from "./ContactMeForm";
+import { SendHorizonalIcon } from "lucide-react";
 
 interface ContactMeFlyOutProps {
   icon?: React.ReactNode;
 }
 
-const ContactMeFlyOut: React.FC<ContactMeFlyOutProps> = ({ icon }: any) => {
+const ContactMeFlyOut: React.FC<ContactMeFlyOutProps> = () => {
   return (
     <Sheet>
-      <SheetTrigger asChild>
-        <Button variant="ghost" className="flex gap-2 text-lg">
-          {icon && <div>{icon}</div>}
-          Contact
+      <SheetTrigger>
+        <Button
+          variant="outline"
+          className="mb-1 w-[15rem] flex gap-2 hover:text-[#ff2600] items-center hover:bg-transparent hover:border-[#ff2600] border-zinc-500  font-normal"
+        >
+          <SendHorizonalIcon size={15} color="#ff2600" />
+          CONTACT ME
         </Button>
       </SheetTrigger>
       <SheetContent side={"right"}>
-        <SheetHeader>
-          <SheetTitle className="mb-2">Contact Me</SheetTitle>
-        </SheetHeader>
         <ContactMeForm />
         <SheetFooter>
           <SheetClose asChild></SheetClose>

@@ -7,68 +7,77 @@ import {
 } from "@/components/ui/card";
 import { CiscoExp } from "../info";
 import { ciscoLogo } from "@/assets";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 
 const CiscoExpCard = () => {
   return (
-    <Card className="border-none flex items-center flex-col ">
+    <Card className="border-none bg-transparent">
       <CardHeader className="flex items-center">
-        <CardTitle>{CiscoExp.position}</CardTitle>
+        <CardTitle className="flex gap-2">
+          {CiscoExp.position} <img className="w-10 h-10" src={ciscoLogo} />
+        </CardTitle>
         <CardDescription className="text-lg italic">
           JULY 19, 2021 - PRESENT
         </CardDescription>
       </CardHeader>
-      <CardContent className="flex flex-col items-center justify-center text-xl ">
-        <Accordion type="multiple" className="w-full">
-          <AccordionItem value="item-1">
-            <AccordionTrigger>Lead UI Engineer</AccordionTrigger>
-            <AccordionContent className="text-xl">
-              <p>{CiscoExp.bullet1}</p>
-              <p>{CiscoExp.bullet2}</p>
-              <p>{CiscoExp.bullet3}</p>
-              <p>{CiscoExp.bullet4}</p>
-              <p>{CiscoExp.bullet5}</p>
-              <p>{CiscoExp.bullet6}</p>
-              <p>{CiscoExp.bullet7}</p>
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-2">
-            <AccordionTrigger className="flex items-start">
-              {" "}
-              Software Tools Development
-            </AccordionTrigger>
-            <AccordionContent className="text-xl">
-              <p>{CiscoExp.bullet8}</p>
-              <p>{CiscoExp.bullet9}</p>
-              <p>{CiscoExp.bullet10}</p>
-              <p>{CiscoExp.bullet11}</p>
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-3">
-            <AccordionTrigger> Versatile Roles</AccordionTrigger>
-            <AccordionContent className="text-xl">
-              <p>{CiscoExp.bullet12}</p>
-              <p>{CiscoExp.bullet13}</p>
-              <p>{CiscoExp.bullet14}</p>
-              <p>{CiscoExp.bullet15}</p>
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-4">
-            <AccordionTrigger> Architectual Planning</AccordionTrigger>
-            <AccordionContent className="text-xl">
-              <p>{CiscoExp.bullet16}</p>
-              <p>{CiscoExp.bullet17}</p>
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
-        <div className="flex justify-center mt-10 max-w-[1000px]">
-          <img src={ciscoLogo} alt="ciscoLogo" className="w-[18%]" />
-        </div>
+      <CardContent className="flex flex-col items-center 2xl:flex-row gap-10">
+        <LeadUIEngBlock />
+        <SoftwareToolsDev />
+        <VersatileRoles />
+        <ArchitectualPlanning />
+      </CardContent>
+    </Card>
+  );
+};
+
+const LeadUIEngBlock = () => {
+  return (
+    <Card className="p-10 rounded-[24px] bg-neutral-900 border-none w-[25rem] max-h-[25rem] overflow-auto">
+      <CardContent className="flex flex-col gap-2 text-[1rem]">
+        <h1 className="text-[1.5rem]">Lead UI Engineer</h1>
+        <p>{CiscoExp.bullet1}</p>
+        <p>{CiscoExp.bullet2}</p>
+        <p>{CiscoExp.bullet3}</p>
+        <p>{CiscoExp.bullet4}</p>
+        <p>{CiscoExp.bullet5}</p>
+        <p>{CiscoExp.bullet6}</p>
+        <p>{CiscoExp.bullet7}</p>
+      </CardContent>
+    </Card>
+  );
+};
+const SoftwareToolsDev = () => {
+  return (
+    <Card className="p-10 rounded-[24px]  bg-neutral-900 border-none w-[25rem] max-h-[25rem] overflow-auto ">
+      <CardContent className="flex flex-col gap-2 text-[1rem]">
+        <h1 className="text-[1.5rem]">Software Tool Development</h1>
+        <p>{CiscoExp.bullet8}</p>
+        <p>{CiscoExp.bullet9}</p>
+        <p>{CiscoExp.bullet10}</p>
+        <p>{CiscoExp.bullet11}</p>
+      </CardContent>
+    </Card>
+  );
+};
+const VersatileRoles = () => {
+  return (
+    <Card className="p-10 rounded-[24px] bg-neutral-900 border-none w-[25rem] max-h-[25rem] overflow-auto ">
+      <CardContent className="flex flex-col gap-2 text-[1rem]">
+        <h1 className="text-[1.5rem]">Versatile Roles</h1>
+        <p>{CiscoExp.bullet12}</p>
+        <p>{CiscoExp.bullet13}</p>
+        <p>{CiscoExp.bullet14}</p>
+        <p>{CiscoExp.bullet15}</p>
+      </CardContent>
+    </Card>
+  );
+};
+const ArchitectualPlanning = () => {
+  return (
+    <Card className="p-10 rounded-[24px] bg-neutral-900 border-none w-[25rem] h-[25rem] overflow-auto ">
+      <CardContent className="flex flex-col gap-2 text-[1rem]">
+        <h1 className="text-[1.5rem]">Architecural Planning</h1>
+        <p>{CiscoExp.bullet16}</p>
+        <p>{CiscoExp.bullet17}</p>
       </CardContent>
     </Card>
   );

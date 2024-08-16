@@ -1,6 +1,6 @@
 // Icon Imports
 export const navLinks = [
-  { name: "Home", href: "/home" },
+  { name: "Home", href: "/" },
 
   { name: "Experience", href: "/experience" },
 ];
