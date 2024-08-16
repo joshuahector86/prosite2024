@@ -7,31 +7,28 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <Page>
-      <div className="flex flex-col items-center justify-center ">
+      <Card className="border-none flex flex-col items-center bg-transparent">
         <img
           src={photoOfMe}
           alt="photo of me"
-          className="rounded-full w-[12%] "
+          className="rounded-full lg:w-[20rem] md:w-[15rem] w-[10rem]"
         />
-        <Card className="border-none flex flex-col items-center bg-transparent">
-          <CardHeader className="flex flex-col items-center">
-            <CardTitle className="text-[4rem]">Dimitri Hector</CardTitle>
-            <div className="text-[3rem]">Senior Software Engineer</div>
-          </CardHeader>
-          <CardContent className="max-w-[50rem] text-xl">
-            Welcome to my site! I’m a full stack software engineer who is
-            constantly learning what the tech world has to offer. I enjoy
-            exploring new technology, expanding my understanding of the modern
-            tech world, building computers, and just generally getting nerdy.
-            This website lists some of my previous professional experience and
-            includes links to my personal portfolio site where I place projects
-            that were me playing around with various technologies. Feel free to
-            reach out to me using the contact form or via LinkedIn. Thanks for
-            stopping by!
-          </CardContent>
-          <HomeButtons />
-        </Card>
-      </div>
+        <CardHeader className="flex flex-col items-center">
+          <CardTitle className="text-[4rem]">Dimitri Hector</CardTitle>
+          <div className="text-[3rem]">Senior Software Engineer</div>
+        </CardHeader>
+        <CardContent className="max-w-[50rem] text-xl text-wrap">
+          Welcome to my site! I’m a full stack software engineer who is
+          constantly learning what the tech world has to offer. I enjoy
+          exploring new technology, expanding my understanding of the modern
+          tech world, building computers, and just generally getting nerdy. This
+          website lists some of my previous professional experience and includes
+          links to my personal portfolio site where I place projects that were
+          me playing around with various technologies. Feel free to reach out to
+          me using the contact form or via LinkedIn. Thanks for stopping by!
+        </CardContent>
+        <HomeButtons />
+      </Card>
     </Page>
   );
 };

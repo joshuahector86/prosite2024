@@ -6,8 +6,6 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Link, useLocation } from "react-router-dom";
 import { navLinks } from "@/utils/urls";
-import { logo } from "@/assets";
-import ContactMeFlyOut from "../ContactMeFlyOut/ContactMeFlyOut";
 import { useState } from "react";
 import { MenuSquareIcon } from "lucide-react";
 
@@ -24,13 +22,7 @@ const Topbar = () => {
     return location.pathname === path;
   };
   return (
-    <NavigationMenu className=" flex justify-between">
-      <Link to="/">
-        <div className="flex items-center gap-2 text-lg font-semibold ">
-          <img src={logo} alt="logo" className=" rounded-full w-16 h-16 " />
-          Dimitri Hector
-        </div>
-      </Link>
+    <NavigationMenu className="flex justify-center p-2 ">
       <NavigationMenuList>
         {navLinks.map((link) => (
           <NavigationMenuItem className="hidden md:block" key={link.name}>
@@ -48,16 +40,8 @@ const Topbar = () => {
           </NavigationMenuItem>
         ))}
 
-        <NavigationMenuItem className="hidden md:block">
-          <div
-            className={`p-[1.5px] text-lg border-b-4 border-transparent hover:border-zinc-600 flex  `}
-          >
-            <ContactMeFlyOut />
-          </div>
-        </NavigationMenuItem>
-
         {/* Hamburger Menu */}
-        <div className="md:hidden">
+        <div className="md:hidden absolute  top-0">
           <button
             onClick={toggleMenu}
             className=""
