@@ -70,7 +70,7 @@ const Topbar = () => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden flex flex-col ">
-            <Link className="hover:text-zinc-500" to="/home">
+            <Link className="hover:text-zinc-500" to="/">
               Home
             </Link>
             <Link className="hover:text-zinc-500" to="/experience">
