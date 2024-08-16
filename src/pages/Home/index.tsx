@@ -25,10 +25,8 @@ const Home = () => {
           Welcome to my site! I’m a full stack software engineer who is
           constantly learning what the tech world has to offer. I enjoy
           exploring new technology, expanding my understanding of the modern
-          tech world, building computers, and just generally getting nerdy. This
-          website lists some of my previous professional experience and includes
-          links to my personal portfolio site. Feel free to reach out using the
-          contact form or via LinkedIn. Thanks for stopping by!
+          tech world, building computers, and just generally getting nerdy.
+          Thanks for stopping by!
         </CardContent>
         <HomeButtons />
       </Card>
@@ -37,15 +35,9 @@ const Home = () => {
 };
 
 const HomeButtons = () => {
-  const downloadResume = () => {
-    const pdfUrl = "joshua_hector_resume.pdf";
-    const link = document.createElement("a");
-    link.href = pdfUrl;
-    link.download = "Joshua_Hector_Resume.pdf"; // specify the filename
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+  const pdfUrl =
+    "https://drive.google.com/uc?export=download&id=1VrskcCpFAf2iFRzn0JvMkba8r8sXADXB";
+
   return (
     <div className="flex flex-col gap-2  md:flex-row ">
       <Link
@@ -63,10 +55,9 @@ const HomeButtons = () => {
       <Button
         variant="outline"
         className="w-[15rem] hover:bg-transparent hover:text-[#ff2600] hover:border-[#ff2600] border-zinc-500  font-normal flex gap-2 items-center"
-        onClick={downloadResume}
       >
         <DownloadIcon size={15} color="#ff2600" />
-        DOWNLOAD RESUME
+        <a href={pdfUrl}>DOWNLOAD RESUME</a>
       </Button>
       <ContactMeFlyOut />
     </div>
