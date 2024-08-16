@@ -10,7 +10,7 @@ import { ciscoLogo } from "@/assets";
 
 const CiscoExpCard = () => {
   return (
-    <Card className=" border-none bg-transparent">
+    <Card className="border-none bg-transparent">
       <CardHeader className="flex items-center">
         <CardTitle className="flex gap-2">
           {CiscoExp.position} <img className="w-10" src={ciscoLogo} />
@@ -19,7 +19,7 @@ const CiscoExpCard = () => {
           JULY 19, 2021 - PRESENT
         </CardDescription>
       </CardHeader>
-      <CardContent className="flex gap-10">
+      <CardContent className="flex flex-col items-center xl:flex-row gap-10">
         <LeadUIEngBlock />
         <SoftwareToolsDev />
         <VersatileRoles />
@@ -31,7 +31,7 @@ const CiscoExpCard = () => {
 
 const LeadUIEngBlock = () => {
   return (
-    <Card className="rounded-[24px] bg-black border-none max-w-[25rem] max-h-[25rem] overflow-auto">
+    <Card className="p-10 rounded-[24px] bg-neutral-900 border-none w-[20rem] max-h-[25rem] overflow-auto">
       <CardContent className="flex flex-col gap-2 text-[1rem]">
         <h1 className="text-[1.5rem]">Lead UI Engineer</h1>
         <p>{CiscoExp.bullet1}</p>
@@ -47,7 +47,7 @@ const LeadUIEngBlock = () => {
 };
 const SoftwareToolsDev = () => {
   return (
-    <Card className="rounded-[24px] bg-black border-none max-w-[25rem] max-h-[25rem] ">
+    <Card className="p-10 rounded-[24px]  bg-neutral-900 border-none w-[20rem] max-h-[25rem] overflow-auto ">
       <CardContent className="flex flex-col gap-2 text-[1rem]">
         <h1 className="text-[1.5rem]">Software Tool Development</h1>
         <p>{CiscoExp.bullet8}</p>
@@ -60,7 +60,7 @@ const SoftwareToolsDev = () => {
 };
 const VersatileRoles = () => {
   return (
-    <Card className="rounded-[24px] bg-black border-none max-w-[25rem] max-h-[25rem] ">
+    <Card className="p-10 rounded-[24px] bg-neutral-900 border-none w-[20rem] max-h-[25rem] overflow-auto ">
       <CardContent className="flex flex-col gap-2 text-[1rem]">
         <h1 className="text-[1.5rem]">Versatile Roles</h1>
         <p>{CiscoExp.bullet12}</p>
@@ -73,7 +73,7 @@ const VersatileRoles = () => {
 };
 const ArchitectualPlanning = () => {
   return (
-    <Card className="rounded-[24px] bg-black border-none max-w-[25rem] max-h-[25rem] ">
+    <Card className="p-10 rounded-[24px] bg-neutral-900 border-none w-[20rem] h-[25rem] overflow-auto ">
       <CardContent className="flex flex-col gap-2 text-[1rem]">
         <h1 className="text-[1.5rem]">Architecural Planning</h1>
         <p>{CiscoExp.bullet16}</p>
