@@ -36,7 +36,7 @@ const Home = () => {
 
 const HomeButtons = () => {
   const pdfUrl =
-    "https://drive.google.com/uc?export=download&id=1VrskcCpFAf2iFRzn0JvMkba8r8sXADXB";
+    "https://drive.google.com/uc?export=download&id=1IW2L2Y1J-RRXBlkEdxswdbgyNKHqY9Ck";
 
   return (
     <div className="flex flex-col gap-2  md:flex-row ">
