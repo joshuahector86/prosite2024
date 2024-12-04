@@ -31,7 +31,7 @@ const CiscoExpCard = () => {
 
 const LeadUIEngBlock = () => {
   return (
-    <Card className="p-10 rounded-[24px] bg-neutral-900 border-none w-[25rem] max-h-[25rem] overflow-auto">
+    <Card className="p-10 rounded-[24px] bg-neutral-900 border-none w-[75%] max- overflow-auto">
       <CardContent className="flex flex-col gap-2 text-[1rem]">
         <h1 className="text-[1.5rem]">Lead UI Engineer</h1>
         <p>{CiscoExp.bullet1}</p>
@@ -47,7 +47,7 @@ const LeadUIEngBlock = () => {
 };
 const SoftwareToolsDev = () => {
   return (
-    <Card className="p-10 rounded-[24px]  bg-neutral-900 border-none w-[25rem] max-h-[25rem] overflow-auto ">
+    <Card className="p-10 rounded-[24px]  bg-neutral-900 border-none w-[75%] max- overflow-auto ">
       <CardContent className="flex flex-col gap-2 text-[1rem]">
         <h1 className="text-[1.5rem]">Software Tool Development</h1>
         <p>{CiscoExp.bullet8}</p>
@@ -60,7 +60,7 @@ const SoftwareToolsDev = () => {
 };
 const VersatileRoles = () => {
   return (
-    <Card className="p-10 rounded-[24px] bg-neutral-900 border-none w-[25rem] max-h-[25rem] overflow-auto ">
+    <Card className="p-10 rounded-[24px] bg-neutral-900 border-none w-[75%] max- overflow-auto ">
       <CardContent className="flex flex-col gap-2 text-[1rem]">
         <h1 className="text-[1.5rem]">Versatile Roles</h1>
         <p>{CiscoExp.bullet12}</p>
@@ -73,7 +73,7 @@ const VersatileRoles = () => {
 };
 const ArchitectualPlanning = () => {
   return (
-    <Card className="p-10 rounded-[24px] bg-neutral-900 border-none w-[25rem] h-[25rem] overflow-auto ">
+    <Card className="p-10 rounded-[24px] bg-neutral-900 border-none w-[75%]  overflow-auto ">
       <CardContent className="flex flex-col gap-2 text-[1rem]">
         <h1 className="text-[1.5rem]">Architecural Planning</h1>
         <p>{CiscoExp.bullet16}</p>
