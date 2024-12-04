@@ -21,7 +21,7 @@ const HowardExpCard = () => {
           FEBRUARY 2020 - MAY 2021
         </CardDescription>
       </CardHeader>
-      <CardContent className="max-w-[25rem] p-10 flex flex-col gap-2 text-[1rem] bg-neutral-900 rounded-[24px]">
+      <CardContent className="w-[75%] p-10 flex flex-col gap-2 text-[1rem] bg-neutral-900 rounded-[24px]">
         <h1 className="text-[1.5rem]"> {HowardExp.position}</h1>
         <p>{HowardExp.bullet1}</p>
         <p className="">{HowardExp.bullet2}</p>

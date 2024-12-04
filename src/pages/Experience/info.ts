@@ -1,6 +1,6 @@
 const CiscoExp = {
   ogranizationName: "Cisco Systems",
-  position: "Full Stack Software Engineer @ Cisco Systems",
+  position: "Senior Full Stack Software Engineer @ Cisco Systems",
   bullet1:
     "- Spearheaded the development of various UI projects, creating impactful and user-friendly designs.",
   bullet2:
@@ -38,7 +38,7 @@ const CiscoExp = {
 
 const HowardExp = {
   organizationName: "Howard University",
-  position: "Cyber Security Engineer",
+  position: "Software Engineer",
   bullet1:
     "- Worked as a software engineer in the cyber security department at Howard University.",
 
@@ -48,7 +48,7 @@ const HowardExp = {
 
 const AutodeskExp = {
   organizationName: "Autodesk Inc.",
-  position: "Robotics Engineer",
+  position: "RSoftware Engineer",
   bullet1:
     "- Worked as a software engineer under the experimental robotics team.",
   bullet2: "- Designed testable simulations in tandem with team members.",
