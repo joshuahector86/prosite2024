@@ -48,7 +48,7 @@ const HowardExp = {
 
 const AutodeskExp = {
   organizationName: "Autodesk Inc.",
-  position: "RSoftware Engineer",
+  position: "Software Engineer",
   bullet1:
     "- Worked as a software engineer under the experimental robotics team.",
   bullet2: "- Designed testable simulations in tandem with team members.",

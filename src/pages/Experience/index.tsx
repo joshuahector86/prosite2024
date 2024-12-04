@@ -5,7 +5,7 @@ import AutodeskExpCard from "./ExperienceTabs/AutodeskExpCard";
 const Experience = () => {
   return (
     <Page>
-      <div className="flex flex-col items-center px-10 pb-10">
+      <div className="flex flex-col items-center pb-10">
         <CiscoExpCard />
         <HowardExpCard />
         <AutodeskExpCard />
