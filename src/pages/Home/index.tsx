@@ -4,7 +4,7 @@ import { photoOfMe } from "@/assets";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import ContactMeFlyOut from "@/components/shared/ContactMeFlyOut/ContactMeFlyOut";
-import { DownloadIcon, GalleryVertical } from "lucide-react";
+import { GalleryVertical } from "lucide-react";
 
 const Home = () => {
   return (
@@ -35,14 +35,14 @@ const Home = () => {
 };
 
 const HomeButtons = () => {
-  const pdfUrl =
-    "https://drive.google.com/uc?export=download&id=1Pw02ixdXy4vU2pqvMJ8ZxjtbKzikhQ73";
+  // const pdfUrl =
+  //   "https://drive.google.com/uc?export=download&id=1Pw02ixdXy4vU2pqvMJ8ZxjtbKzikhQ73";
 
   return (
     <div className="flex flex-col gap-2  md:flex-row ">
       <Link
         target="_blank"
-        to="https://joshuahector86.github.io/portfolio_2023/"
+        to="https://portfolio-joshuahector86s-projects.vercel.app"
       >
         <Button
           className="w-[15rem] font-normal hover:text-[#ff2600] hover:bg-transparent hover:border-[#ff2600] border-zinc-500 flex gap-2 items-center"
@@ -52,13 +52,13 @@ const HomeButtons = () => {
           PERSONAL PORTFOLIO
         </Button>
       </Link>
-      <Button
+      {/* <Button
         variant="outline"
         className="w-[15rem] hover:bg-transparent hover:text-[#ff2600] hover:border-[#ff2600] border-zinc-500  font-normal flex gap-2 items-center"
       >
         <DownloadIcon size={15} color="#ff2600" />
         <a href={pdfUrl}>DOWNLOAD RESUME</a>
-      </Button>
+      </Button> */}
       <ContactMeFlyOut />
     </div>
   );
