@@ -5,30 +5,29 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import ContactMeFlyOut from "@/components/shared/ContactMeFlyOut/ContactMeFlyOut";
 import { GalleryVertical } from "lucide-react";
+import Experience from "../Experience";
+import ExperienceHeader from "../Experience/ExperienceTabs/ExperienceHeader";
 
 const Home = () => {
   return (
     <Page>
-      <Card className="border-none flex flex-col items-center bg-transparent">
+      <Card className="border-none flex flex-col items-center bg-transparent max-w-[50rem]">
         <img
           src={photoOfMe}
           alt="photo of me"
           className="rounded-full lg:w-[20rem] md:w-[15rem] w-[10rem]"
         />
         <CardHeader className="flex flex-col items-center">
-          <CardTitle className="text-[4rem]">Dimitri Hector</CardTitle>
-          <div className="text-[2.5rem] text-[#3483C9]">
+          <CardTitle className=" text-[2rem] sm:text-[4rem]">Dimitri Hector</CardTitle>
+          <div className=" text-[1.5rem]   sm:text-[2.5rem] text-[#3483C9]">
             Senior Software Engineer
           </div>
         </CardHeader>
-        <CardContent className="max-w-[50rem] text-xl text-wrap">
-          Welcome to my site! I’m a full stack software engineer who is
-          constantly learning what the tech world has to offer. I enjoy
-          exploring new technology, expanding my understanding of the modern
-          tech world, building computers, and just generally getting nerdy.
-          Thanks for stopping by!
+        <CardContent className="">
+          <ExperienceHeader/>
         </CardContent>
         <HomeButtons />
+        <Experience/>
       </Card>
     </Page>
   );

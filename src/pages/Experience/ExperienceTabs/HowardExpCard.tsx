@@ -5,26 +5,27 @@ import {
   CardDescription,
   CardContent,
 } from "@/components/ui/card";
-import { howardLogo } from "@/assets";
 
 import { Link } from "react-router-dom";
 import { HowardExp } from "../info";
 const HowardExpCard = () => {
   return (
-    <Card className="sm:w-[57%] border-none bg-transparent  flex items-center p-6  flex-col">
+    <Card className="border-none bg-transparent flex-col">
       <CardHeader className="flex items-center">
         <CardTitle className="flex gap-2 items-center">
           {HowardExp.position} @ {HowardExp.organizationName}
-          <img src={howardLogo} alt="" className="w-[7rem]" />
         </CardTitle>
         <CardDescription className="text-lg italic">
           FEBRUARY 2020 - MAY 2021
         </CardDescription>
       </CardHeader>
-      <CardContent className="w-full p-10 flex flex-col gap-2 text-[1rem] bg-neutral-900 rounded-[24px]">
-        <h1 className="text-[1.5rem]"> {HowardExp.position}</h1>
-        <p>{HowardExp.bullet1}</p>
-        <p className="">{HowardExp.bullet2}</p>
+      <CardContent className="flex flex-col gap-2 text-[1rem] ">
+      <p>
+        Designed and implemented robust cybersecurity measures, fortifying the university's digital 
+        infrastructure against emerging threats. 
+        Published research in IEEE journals, providing groundbreaking insights into cybersecurity 
+        challenges and influencing industry best practices.
+      </p>
         <Link
           target="_blank"
           className="underline hover:text-[#ff2600]"

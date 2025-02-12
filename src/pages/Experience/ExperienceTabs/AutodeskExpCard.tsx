@@ -10,7 +10,7 @@ import { autodeskLogo } from "@/assets";
 
 const AutodeskExpCard = () => {
   return (
-    <Card className="sm:w-[57%] border-none bg-transparent  p-8 flex items-center flex-col">
+    <Card className="border-none bg-transparent flex items-center flex-col">
       <CardHeader className="flex items-center">
         <CardTitle className="flex gap-2 items-center">
           {AutodeskExp.position} @ {AutodeskExp.organizationName}
@@ -20,11 +20,17 @@ const AutodeskExpCard = () => {
           FEBRUARY 2020 - MAY 2021
         </CardDescription>
       </CardHeader>
-      <CardContent className="w-full p-10 flex flex-col gap-2 text-[1rem] bg-neutral-900 rounded-[24px]">
-        <h1 className="text-[1.5rem]"> {AutodeskExp.position}</h1>
-        <p>{AutodeskExp.bullet1}</p>
-        <p>{AutodeskExp.bullet2}</p>
-        <p>{AutodeskExp.bullet3}</p>
+      <CardContent className=" flex flex-col gap-2 text-[1rem] ">
+        <p>
+          Engineered software solutions for advanced robotics platforms, focusing on scalability, 
+          performance, and ease of simulation testing for real-world deployments. 
+
+          Partnered with cross-disciplinary teams to implement secure and innovative designs, 
+          pioneering advancements in robotic system security and vulnerability mitigation. 
+
+          Contributed to simulations that improved the testing and deployment lifecycle, 
+          ensuring the precision of robotics in complex environments.
+        </p>
       </CardContent>
     </Card>
   );
