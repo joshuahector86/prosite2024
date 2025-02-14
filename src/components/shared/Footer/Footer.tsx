@@ -23,7 +23,7 @@ const Footer = () => {
         <Link
           className="hover:text-[#ff2600]"
           target="_blank"
-          to="https://joshuahector86.github.io/portfolio_2023/"
+          to="https://portfolio-joshuahector86s-projects.vercel.app/"
         >
           <GalleryVertical />
         </Link>
