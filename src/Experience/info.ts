@@ -17,7 +17,9 @@ export const ExperienceInfo = {
         organizationName: "Harbor.ai",
         position: "Software Engineer @ Harbor.ai",
         description: `Software Engineer at Harbor.ai who specializes in building scalable and 
-        user friendly web applications.`,
+        user friendly web applications. Responsiblities include architecting and developing company landing site 
+        and contributing to the main product. Playing a key role in shaping the application's UI/UX, enhancing 
+        accessibility, responsiveness, and performance.`,
       },
       {
         timePeriod: "JULY 19, 2021 - NOVEMBER 15, 2024",
