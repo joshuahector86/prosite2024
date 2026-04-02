@@ -1,31 +1,25 @@
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardContent,
-} from "@/components/ui/card";
 import { ExperienceInfo } from "./info";
 
 const ExperienceCard = () => {
   return (
-    <>
-      {ExperienceInfo.experience.experiences.map((exp) => (
-        <Card className="border-none bg-transparent">
-          <CardHeader className="flex items-center">
-            <CardTitle className="flex gap-2 text-3xl">
-              {exp.position}
-            </CardTitle>
-            <CardDescription className="text-lg italic ">
-              {exp.timePeriod}
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="flex flex-col items-center gap-10">
-            <p className="text-lg">{exp.description}</p>
-          </CardContent>
-        </Card>
+    <div className="flex flex-col gap-10 w-full px-2">
+      {ExperienceInfo.experience.experiences.map((exp, i) => (
+        <div
+          key={i}
+          className="group border-l-2 border-zinc-700 hover:border-[#ff2600] pl-6 transition-colors duration-300"
+        >
+          <h3 className="text-lg sm:text-xl font-semibold leading-snug group-hover:text-white transition-colors duration-200">
+            {exp.position}
+          </h3>
+          <p className="text-xs sm:text-sm text-[#3483C9] uppercase tracking-widest mt-1 font-medium">
+            {exp.timePeriod}
+          </p>
+          <p className="text-sm sm:text-base text-muted-foreground mt-3 leading-relaxed">
+            {exp.description}
+          </p>
+        </div>
       ))}
-    </>
+    </div>
   );
 };
 
