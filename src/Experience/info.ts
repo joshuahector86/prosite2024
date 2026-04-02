@@ -13,9 +13,16 @@ export const ExperienceInfo = {
     subtitle: "Work Experience",
     experiences: [
       {
-        timePeriod: "MARCH 10, 2025 - PRESENT",
+        timePeriod: "MARCH 20, 2026 - PRESENT",
+        organizationName: "SyntaxNSteps",
+        position: "CEO & CTO @ SyntaxNSteps",
+        description: `CEO & CTO at SyntaxNSteps who specializes in building scalable and 
+        user friendly web applications alongside an expansive artistic repertoire. Responsibilities include overseeing the company's technical strategy, artistic strategy, and day-to-day operations. Leading the development of innovative web applications and leading artistic creativity in a multitide of projects.  Playing a key role in shaping the company's vision, fostering a culture of innovation, and driving growth through strategic planning and execution.`,
+      },
+      {
+        timePeriod: "MARCH 10, 2025 - March 20, 2026",
         organizationName: "Harbor.ai",
-        position: "Software Engineer @ Harbor.ai",
+        position: "Senior Full Stack Software Engineer @ Harbor.ai",
         description: `Software Engineer at Harbor.ai who specializes in building scalable and 
         user friendly web applications. Responsiblities include architecting and developing company landing site 
         and contributing to the main product. Playing a key role in shaping the application's UI/UX, enhancing 

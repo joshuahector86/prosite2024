@@ -7,8 +7,8 @@ interface PageProps {
 
 const Page: React.FC<PageProps> = ({ children }) => {
   return (
-    <div>
-      <div className="flex justify-center p-10">{children}</div>
+    <div className="min-h-screen flex flex-col">
+      <div className="flex-1 flex justify-center px-4 py-12">{children}</div>
       <Footer />
     </div>
   );
